@@ -1,0 +1,41 @@
+<form #createPurchaseForm="ngForm" (ngSubmit)="addPurchase()">
+  <div class="card">
+    <div class="card-header">
+      <h3 class="card-title">Add Purchase</h3>
+    </div>
+    <div class="card-body">
+      <div class="form-group" [class.has-success]="supplierNameControl.valid" [class.has-danger]="supplierNameControl.invalid && supplierNameControl.touched">
+        <label>Supplier Name</label>
+        <input type="text" required id="supplierName" name="purchase.supplierName" #supplierNameControl="ngModel" class="form-control"
+        [(ngModel)]="purchase.supplierName" />
+        <span class="form-text" *ngIf="supplierNameControl.invalid && supplierNameControl.touched">
+          Supplier Name is required
+        </span>
+      </div>
+      <div class="form-group" [class.has-success]="productLabelControl.valid" [class.has-danger]="productLabelControl.invalid && productLabelControl.touched">
+          <label>Product Type</label>
+          <select required #productLabelControl="ngModel" class="form-control" id="productId" name="purchase.productId" [(ngModel)]="purchase.productId">
+            <option *ngFor="let prod of products" [value]="prod.id">
+              {{prod.productLabel}}
+            </option>
+          </select>
+          <span class="form-text" *ngIf="productLabelControl.invalid && productLabelControl.touched">
+            Product Type is required
+          </span>
+        </div>
+        <div class="form-group">
+            <label>Numbers Received</label>
+            <input type="text" id="numberReceived" name="purchase.numberReceived" #numberReceivedControl="ngModel" class="form-control"
+            [(ngModel)]="purchase.numberReceived" />
+          </div>
+          <div class="form-group">
+              <label>Purchase Date</label>
+              <input type="text" bsDatepicker id="purchaseDate" name="purchase.purchaseDate" #numberReceivedControl="ngModel" class="form-control"
+              [(ngModel)]="purchase.purchaseDate" />
+            </div>
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-primary" [disabled]="createPurchaseForm.invalid" type="submit">Add Purchase</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,19 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Order Number</th>
+      <th>Product ID</th>
+      <th>Numbers Shipped</th>
+      <th>Order Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let orderToDisplay of orders">
+      <td>{{orderToDisplay.orderNumber}}</td>
+      <td>{{orderToDisplay.productId}}</td>
+      <td>{{orderToDisplay.numberShipped}}</td>
+      <td>{{orderToDisplay.orderDate|date}}</td>
+    </tr>
+  </tbody>
+</table>
+<span class="btn btn-primary" [routerLink]="['/createOrder']" queryParamsHandling="preserve">Add Order</span>

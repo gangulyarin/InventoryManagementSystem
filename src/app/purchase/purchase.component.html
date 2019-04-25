@@ -1,0 +1,22 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Supplier ID</th>
+      <th>Product ID</th>
+      <th>Number Received</th>
+      <th>Purchase Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let purchaseToDisplay of purchases">
+      <td></td>
+      <!--<td><span class="fa fa-pencil-squre-o" [router-link]="['editPurchase',{id:purchaseToDisplay}]" queryParamsHandling="preserve"></span></td>-->
+      <td>{{purchaseToDisplay.supplierName}}</td>
+      <td>{{purchaseToDisplay.productId}}</td>
+      <td>{{purchaseToDisplay.numberReceived}}</td>
+      <td>{{purchaseToDisplay.purchaseDate|date}}</td>
+    </tr>
+  </tbody>
+</table>
+<span class="btn btn-primary" [routerLink]="['/createPurchase']">Add Purchase</span>

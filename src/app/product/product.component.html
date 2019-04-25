@@ -1,0 +1,28 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Product Number</th>
+      <th>Product Type</th>
+      <th>Starting Inventory</th>
+      <th>Inventory Received</th>
+      <th>Inventory Shipped</th>
+      <th>Inventory On Hand</th>
+      <th>Minimum Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let productsToDisplayed of productsToDisplay" [class.table-danger]="productsToDisplayed.minimumRequired-productsToDisplayed.inventoryOnHand>0">
+      <td><span class="fa fa-pencil-square-o" [routerLink]="['/editProduct',{id:productsToDisplayed.id}]" queryParamsHandling="preserve"></span></td>
+      <td>{{productsToDisplayed.productNumber}}</td>
+      <td>{{productsToDisplayed.productLabel}}</td>
+      <td>{{productsToDisplayed.startingInventory}}</td>
+      <td>{{productsToDisplayed.inventoryReceived}}</td>
+      <td>{{productsToDisplayed.inventoryShipped}}</td>
+      <td>{{productsToDisplayed.inventoryOnHand}}</td>
+      <td>{{productsToDisplayed.minimumRequired}}</td>
+    </tr>
+  </tbody>
+</table>
+<span class="btn btn-primary" [routerLink]="['/createProduct']">Add New Product</span>
+<router-outlet></router-outlet>
