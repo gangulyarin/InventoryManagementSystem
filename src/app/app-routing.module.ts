@@ -8,6 +8,7 @@ import { EditProductComponent } from './edit-product/edit-product.component';
 import { CreateProductComponent } from './create-product/create-product.component';
 import { CreateOrderComponent } from './create-order/create-order.component';
 import { CreatePurchaseComponent } from './create-purchase/create-purchase.component';
+import { ReportComponent } from './report/report.component';
 
 const routes: Routes = [
   {path:'product', component:ProductComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path:'createOrder', component:CreateOrderComponent},
   {path:'purchase', component:PurchaseComponent},
   {path:'createPurchase', component:CreatePurchaseComponent},
+  {path:'report', component:ReportComponent},
   {path:'', redirectTo:'/product', pathMatch:'full'},
   {path:"**", component:PageNotFoundComponent}
 ];

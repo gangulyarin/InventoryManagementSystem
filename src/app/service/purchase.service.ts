@@ -7,14 +7,14 @@ export class PurchaseService{
         {
             id: '0012',
             supplierName: '2011',
-            productId: '0011',
+            productId: '00001',
             numberReceived: 47,
             purchaseDate: '10-09-2015'
         },
         {
             id: '0005',
             supplierName: '8071',
-            productId: '0012',
+            productId: '00002',
             numberReceived: 3,
             purchaseDate: '01-02-2016'
         }

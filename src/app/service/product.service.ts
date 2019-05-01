@@ -55,4 +55,11 @@ export class ProductService{
     addProduct(product:Product){
         this.products.push(product);
     }
+
+    getAllProductTypes():String[]{
+        const productTypes: String[] = this.products.map(p=>{
+            return p.productLabel;
+        });
+        return productTypes;
+    }
 }
