@@ -1,11 +1,13 @@
 import { Injectable } from "@angular/core";
 import { Product } from '../model/product.model';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
 })
 export class ProductService{
-    products:Product[] = [
+    products:Product[] /*= [
         {
             id: '00001',
     productNumber: '00111',
@@ -36,13 +38,19 @@ export class ProductService{
     inventoryOnHand: 123,
     minimumRequired: 4
         }
-    ];
+    ];*/
 
-    getAllProducts():Product[]{
+    constructor(private http:HttpClient){}
+
+    getAllProducts(){
+        this.http.get<Product[]>('https://us-central1-inventory-server-e2ae2.cloudfunctions.net/widgets/api/inventory/getProducts').subscribe((res)=>{
+            this.products = res;
+        })
         return this.products;
     }
 
     getProductById(id:string):Product{
+        this.products = this.getAllProducts();
         const foundIndex = this.products.findIndex(p => p.id === id);
         return this.products[foundIndex];
     }
@@ -50,13 +58,20 @@ export class ProductService{
     editProduct(product:Product){
         const foundIndex = this.products.findIndex(p => p.id === product.id);
         this.products[foundIndex] = product;
+        /*this.http.post('https://us-central1-inventory-server-e2ae2.cloudfunctions.net/widgets/api/inventory/editProduct',product).subscribe(res=>{
+            this.products = this.getAllProducts();
+        })*/
     }
 
     addProduct(product:Product){
         this.products.push(product);
+        /*this.http.post('https://us-central1-inventory-server-e2ae2.cloudfunctions.net/widgets/api/inventory/addProduct',product).subscribe(res=>{
+            this.products = this.getAllProducts();
+        });*/
     }
 
     getAllProductTypes():String[]{
+        this.products = this.getAllProducts();
         const productTypes: String[] = this.products.map(p=>{
             return p.productLabel;
         });

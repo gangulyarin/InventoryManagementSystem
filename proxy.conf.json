@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "https://us-central1-inventory-server-e2ae2.cloudfunctions.net/widgets/",
+    "secure": false
+  }
+}

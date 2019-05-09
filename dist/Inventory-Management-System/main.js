@@ -443,20 +443,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var angular_font_awesome__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! angular-font-awesome */ "./node_modules/angular-font-awesome/dist/angular-font-awesome.es5.js");
 /* harmony import */ var ngx_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-bootstrap */ "./node_modules/ngx-bootstrap/esm5/ngx-bootstrap.js");
 /* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ng2-charts */ "./node_modules/ng2-charts/fesm5/ng2-charts.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _product_product_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./product/product.component */ "./src/app/product/product.component.ts");
-/* harmony import */ var _order_order_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./order/order.component */ "./src/app/order/order.component.ts");
-/* harmony import */ var _purchase_purchase_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./purchase/purchase.component */ "./src/app/purchase/purchase.component.ts");
-/* harmony import */ var _page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./page-not-found/page-not-found.component */ "./src/app/page-not-found/page-not-found.component.ts");
-/* harmony import */ var _service_product_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./service/product.service */ "./src/app/service/product.service.ts");
-/* harmony import */ var _create_product_create_product_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./create-product/create-product.component */ "./src/app/create-product/create-product.component.ts");
-/* harmony import */ var _edit_product_edit_product_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./edit-product/edit-product.component */ "./src/app/edit-product/edit-product.component.ts");
-/* harmony import */ var _service_purchase_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./service/purchase.service */ "./src/app/service/purchase.service.ts");
-/* harmony import */ var _service_order_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./service/order.service */ "./src/app/service/order.service.ts");
-/* harmony import */ var _create_order_create_order_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./create-order/create-order.component */ "./src/app/create-order/create-order.component.ts");
-/* harmony import */ var _create_purchase_create_purchase_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./create-purchase/create-purchase.component */ "./src/app/create-purchase/create-purchase.component.ts");
-/* harmony import */ var _report_report_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./report/report.component */ "./src/app/report/report.component.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _product_product_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./product/product.component */ "./src/app/product/product.component.ts");
+/* harmony import */ var _order_order_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./order/order.component */ "./src/app/order/order.component.ts");
+/* harmony import */ var _purchase_purchase_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./purchase/purchase.component */ "./src/app/purchase/purchase.component.ts");
+/* harmony import */ var _page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./page-not-found/page-not-found.component */ "./src/app/page-not-found/page-not-found.component.ts");
+/* harmony import */ var _service_product_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./service/product.service */ "./src/app/service/product.service.ts");
+/* harmony import */ var _create_product_create_product_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./create-product/create-product.component */ "./src/app/create-product/create-product.component.ts");
+/* harmony import */ var _edit_product_edit_product_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./edit-product/edit-product.component */ "./src/app/edit-product/edit-product.component.ts");
+/* harmony import */ var _service_purchase_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./service/purchase.service */ "./src/app/service/purchase.service.ts");
+/* harmony import */ var _service_order_service__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./service/order.service */ "./src/app/service/order.service.ts");
+/* harmony import */ var _create_order_create_order_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./create-order/create-order.component */ "./src/app/create-order/create-order.component.ts");
+/* harmony import */ var _create_purchase_create_purchase_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./create-purchase/create-purchase.component */ "./src/app/create-purchase/create-purchase.component.ts");
+/* harmony import */ var _report_report_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./report/report.component */ "./src/app/report/report.component.ts");
+
 
 
 
@@ -484,27 +486,28 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"],
-                _product_product_component__WEBPACK_IMPORTED_MODULE_9__["ProductComponent"],
-                _order_order_component__WEBPACK_IMPORTED_MODULE_10__["OrderComponent"],
-                _purchase_purchase_component__WEBPACK_IMPORTED_MODULE_11__["PurchaseComponent"],
-                _page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_12__["PageNotFoundComponent"],
-                _create_product_create_product_component__WEBPACK_IMPORTED_MODULE_14__["CreateProductComponent"],
-                _edit_product_edit_product_component__WEBPACK_IMPORTED_MODULE_15__["EditProductComponent"],
-                _create_order_create_order_component__WEBPACK_IMPORTED_MODULE_18__["CreateOrderComponent"],
-                _create_purchase_create_purchase_component__WEBPACK_IMPORTED_MODULE_19__["CreatePurchaseComponent"],
-                _report_report_component__WEBPACK_IMPORTED_MODULE_20__["ReportComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"],
+                _product_product_component__WEBPACK_IMPORTED_MODULE_10__["ProductComponent"],
+                _order_order_component__WEBPACK_IMPORTED_MODULE_11__["OrderComponent"],
+                _purchase_purchase_component__WEBPACK_IMPORTED_MODULE_12__["PurchaseComponent"],
+                _page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_13__["PageNotFoundComponent"],
+                _create_product_create_product_component__WEBPACK_IMPORTED_MODULE_15__["CreateProductComponent"],
+                _edit_product_edit_product_component__WEBPACK_IMPORTED_MODULE_16__["EditProductComponent"],
+                _create_order_create_order_component__WEBPACK_IMPORTED_MODULE_19__["CreateOrderComponent"],
+                _create_purchase_create_purchase_component__WEBPACK_IMPORTED_MODULE_20__["CreatePurchaseComponent"],
+                _report_report_component__WEBPACK_IMPORTED_MODULE_21__["ReportComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
                 ng2_charts__WEBPACK_IMPORTED_MODULE_6__["ChartsModule"],
                 angular_font_awesome__WEBPACK_IMPORTED_MODULE_4__["AngularFontAwesomeModule"],
                 ngx_bootstrap__WEBPACK_IMPORTED_MODULE_5__["BsDatepickerModule"].forRoot(),
-                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"]
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"]
             ],
-            providers: [_service_product_service__WEBPACK_IMPORTED_MODULE_13__["ProductService"], _service_purchase_service__WEBPACK_IMPORTED_MODULE_16__["PurchaseService"], _service_order_service__WEBPACK_IMPORTED_MODULE_17__["OrderService"]],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
+            providers: [_service_product_service__WEBPACK_IMPORTED_MODULE_14__["ProductService"], _service_purchase_service__WEBPACK_IMPORTED_MODULE_17__["PurchaseService"], _service_order_service__WEBPACK_IMPORTED_MODULE_18__["OrderService"]],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -1265,58 +1268,43 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductService", function() { return ProductService; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
 
 
 var ProductService = /** @class */ (function () {
-    function ProductService() {
-        this.products = [
-            {
-                id: '00001',
-                productNumber: '00111',
-                productLabel: 'Mouse',
-                startingInventory: 0,
-                inventoryReceived: 45,
-                inventoryShipped: 40,
-                inventoryOnHand: 5,
-                minimumRequired: 5
-            },
-            {
-                id: '00002',
-                productNumber: '00211',
-                productLabel: 'Printer',
-                startingInventory: 10,
-                inventoryReceived: 450,
-                inventoryShipped: 4,
-                inventoryOnHand: 100,
-                minimumRequired: 10
-            },
-            {
-                id: '00014',
-                productNumber: '01525',
-                productLabel: 'Monitor',
-                startingInventory: 45,
-                inventoryReceived: 654,
-                inventoryShipped: 89,
-                inventoryOnHand: 123,
-                minimumRequired: 4
-            }
-        ];
+    function ProductService(http) {
+        this.http = http;
     }
     ProductService.prototype.getAllProducts = function () {
+        var _this = this;
+        this.http.get('api/inventory/getProducts').subscribe(function (res) {
+            _this.products = res;
+        });
         return this.products;
     };
     ProductService.prototype.getProductById = function (id) {
+        this.products = this.getAllProducts();
         var foundIndex = this.products.findIndex(function (p) { return p.id === id; });
         return this.products[foundIndex];
     };
     ProductService.prototype.editProduct = function (product) {
-        var foundIndex = this.products.findIndex(function (p) { return p.id === product.id; });
-        this.products[foundIndex] = product;
+        var _this = this;
+        /*const foundIndex = this.products.findIndex(p => p.id === product.id);
+        this.products[foundIndex] = product;*/
+        this.http.post('api/inventory/editProduct', product).subscribe(function (res) {
+            _this.products = _this.getAllProducts();
+        });
     };
     ProductService.prototype.addProduct = function (product) {
-        this.products.push(product);
+        var _this = this;
+        //this.products.push(product);
+        this.http.post('api/inventoryApi/addProduct', product).subscribe(function (res) {
+            _this.products = _this.getAllProducts();
+        });
     };
     ProductService.prototype.getAllProductTypes = function () {
+        this.products = this.getAllProducts();
         var productTypes = this.products.map(function (p) {
             return p.productLabel;
         });
@@ -1325,7 +1313,8 @@ var ProductService = /** @class */ (function () {
     ProductService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
-        })
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
     ], ProductService);
     return ProductService;
 }());

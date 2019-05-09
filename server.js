@@ -1,11 +1,12 @@
 //Install express server
 const express = require('express');
 const path = require('path');
-
+const bodyParser = require('body-parser');
 const app = express();
-console.log(__dirname);
+app.use(bodyParser());
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist/inventory-management-system'));
+
 
 app.get('/*', function(req,res) {
     

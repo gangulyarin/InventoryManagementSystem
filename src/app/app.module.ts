@@ -4,6 +4,7 @@ import { FormsModule} from '@angular/forms';
 import { AngularFontAwesomeModule} from 'angular-font-awesome';
 import { BsDatepickerModule} from 'ngx-bootstrap';
 import { ChartsModule } from 'ng2-charts';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -39,7 +40,8 @@ import { ReportComponent } from './report/report.component';
     ChartsModule,
     AngularFontAwesomeModule,
     BsDatepickerModule.forRoot(),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [ProductService,PurchaseService, OrderService],
   bootstrap: [AppComponent]
