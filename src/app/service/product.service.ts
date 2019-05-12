@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
     providedIn: 'root'
 })
 export class ProductService{
-    products:Product[] /*= [
+    products:Product[] = [
         {
             id: '00001',
     productNumber: '00111',
@@ -38,14 +38,14 @@ export class ProductService{
     inventoryOnHand: 123,
     minimumRequired: 4
         }
-    ];*/
+    ];
 
     constructor(private http:HttpClient){}
 
     getAllProducts(){
-        this.http.get<Product[]>('https://us-central1-inventory-server-e2ae2.cloudfunctions.net/widgets/api/inventory/getProducts').subscribe((res)=>{
+        /*this.http.get<Product[]>('https://us-central1-inventory-server-e2ae2.cloudfunctions.net/widgets/api/inventory/getProducts').subscribe((res)=>{
             this.products = res;
-        })
+        })*/
         return this.products;
     }
 

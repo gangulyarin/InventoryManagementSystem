@@ -10,11 +10,13 @@ import { Product } from '../model/product.model';
 export class ProductComponent implements OnInit {
 
   productsToDisplay:Product[];
-  constructor(productService: ProductService) {
-    this.productsToDisplay = productService.getAllProducts();
-   }
+  constructor(private productService: ProductService) {
+    
+    //console.log(this.productsToDisplay.length);
+  }
 
   ngOnInit() {
+    this.productsToDisplay = this.productService.getAllProducts();
   }
 
 }

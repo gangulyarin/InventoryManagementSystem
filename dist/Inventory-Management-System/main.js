@@ -1011,9 +1011,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var ProductComponent = /** @class */ (function () {
     function ProductComponent(productService) {
-        this.productsToDisplay = productService.getAllProducts();
+        this.productService = productService;
+        //console.log(this.productsToDisplay.length);
     }
     ProductComponent.prototype.ngOnInit = function () {
+        this.productsToDisplay = this.productService.getAllProducts();
     };
     ProductComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1275,12 +1277,43 @@ __webpack_require__.r(__webpack_exports__);
 var ProductService = /** @class */ (function () {
     function ProductService(http) {
         this.http = http;
+        this.products = [
+            {
+                id: '00001',
+                productNumber: '00111',
+                productLabel: 'Mouse',
+                startingInventory: 0,
+                inventoryReceived: 45,
+                inventoryShipped: 40,
+                inventoryOnHand: 5,
+                minimumRequired: 5
+            },
+            {
+                id: '00002',
+                productNumber: '00211',
+                productLabel: 'Printer',
+                startingInventory: 10,
+                inventoryReceived: 450,
+                inventoryShipped: 4,
+                inventoryOnHand: 100,
+                minimumRequired: 10
+            },
+            {
+                id: '00014',
+                productNumber: '01525',
+                productLabel: 'Monitor',
+                startingInventory: 45,
+                inventoryReceived: 654,
+                inventoryShipped: 89,
+                inventoryOnHand: 123,
+                minimumRequired: 4
+            }
+        ];
     }
     ProductService.prototype.getAllProducts = function () {
-        var _this = this;
-        this.http.get('api/inventory/getProducts').subscribe(function (res) {
-            _this.products = res;
-        });
+        /*this.http.get<Product[]>('https://us-central1-inventory-server-e2ae2.cloudfunctions.net/widgets/api/inventory/getProducts').subscribe((res)=>{
+            this.products = res;
+        })*/
         return this.products;
     };
     ProductService.prototype.getProductById = function (id) {
@@ -1289,19 +1322,17 @@ var ProductService = /** @class */ (function () {
         return this.products[foundIndex];
     };
     ProductService.prototype.editProduct = function (product) {
-        var _this = this;
-        /*const foundIndex = this.products.findIndex(p => p.id === product.id);
-        this.products[foundIndex] = product;*/
-        this.http.post('api/inventory/editProduct', product).subscribe(function (res) {
-            _this.products = _this.getAllProducts();
-        });
+        var foundIndex = this.products.findIndex(function (p) { return p.id === product.id; });
+        this.products[foundIndex] = product;
+        /*this.http.post('https://us-central1-inventory-server-e2ae2.cloudfunctions.net/widgets/api/inventory/editProduct',product).subscribe(res=>{
+            this.products = this.getAllProducts();
+        })*/
     };
     ProductService.prototype.addProduct = function (product) {
-        var _this = this;
-        //this.products.push(product);
-        this.http.post('api/inventoryApi/addProduct', product).subscribe(function (res) {
-            _this.products = _this.getAllProducts();
-        });
+        this.products.push(product);
+        /*this.http.post('https://us-central1-inventory-server-e2ae2.cloudfunctions.net/widgets/api/inventory/addProduct',product).subscribe(res=>{
+            this.products = this.getAllProducts();
+        });*/
     };
     ProductService.prototype.getAllProductTypes = function () {
         this.products = this.getAllProducts();
